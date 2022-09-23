@@ -147,6 +147,16 @@ void Fsm::run_machine()
   Fsm::check_timed_transitions();
 }
 
+void Fsm::tick()
+{
+  // tick"on_state"
+  if (m_initialized)
+  {
+     if (m_current_state->on_state != NULL)
+     m_current_state->on_state();
+  }
+}
+
 void Fsm::make_transition(Transition* transition)
 {
  
