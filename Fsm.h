@@ -12,7 +12,6 @@
 //
 // You should have received a copy of the GNU Lesser General Public License
 // along with arduino-fsm.  If not, see <http://www.gnu.org/licenses/>.
-
 #ifndef FSM_H
 #define FSM_H
 
@@ -49,7 +48,7 @@ public:
 
   void trigger(int event);
   void run_machine();
-
+  void tick();
 private:
   struct Transition
   {
